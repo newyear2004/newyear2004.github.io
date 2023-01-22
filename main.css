@@ -1,0 +1,129 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+    overflow: hidden;
+}
+
+span {
+    position: absolute;
+    background: url(s4.png);
+    pointer-events: none;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    animation: snowflakes 2s linear infinite;
+}
+
+@keyframes snowflakes {
+    0% {
+        opacity: 1;
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        transform: translate(50%, 100%);
+        opacity: 0;
+        filter: hue-rotate(100deg);
+    }
+}
+
+.social {
+    margin-right: 95px;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.social-link {
+    padding: 0 10px;
+}
+
+.social-link svg {
+    width: 120px;
+}
+
+.social-link path {
+    fill: transparent;
+    stroke: #53a9db;
+}
+
+.vk-item .social-link path {
+    stroke-dasharray: 2250;
+    stroke-dashoffset: 0;
+    stroke-width: 12;
+}
+
+.vk-item .social-link:hover path {
+    animation: vk 1.6s linear forwards;
+}
+
+.telegram-item .social-link svg {
+    width: 90px;
+}
+
+.telegram-item .social-link path {
+    stroke-dasharray: 75;
+    stroke-dashoffset: 0;
+    stroke-width: .8;
+}
+
+.telegram-item .social-link:hover path {
+    animation: telegram 1.6s linear forwards;
+}
+
+@keyframes vk {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    40% {
+        stroke-dashoffset: 2250;
+        stroke: violet;
+    }
+    80% {
+        stroke-dashoffset: 4500;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 4500;
+        stroke: #53a9db;
+        fill: #53a9db;
+    }
+}
+
+@keyframes telegram {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    40% {
+        stroke-dashoffset: 75;
+        stroke: violet;
+    }
+    80% {
+        stroke-dashoffset: 150;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 150;
+        stroke: #53a9db;
+        fill: #53a9db;
+    }
+}
+
